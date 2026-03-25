@@ -12,11 +12,12 @@ type MenuProps = {
   >;
   setGameResults: React.Dispatch<React.SetStateAction<string | undefined>>;
   setTotalMoveCounter: React.Dispatch<React.SetStateAction<number>>;
+  setPlayersTurn: React.Dispatch<React.SetStateAction<number>>;
 };
 
 
 const ActionsMenu = (props: MenuProps) => {
-  const {setPlayersMovesState, setGameResults, setTotalMoveCounter} = props;
+  const {setPlayersMovesState, setGameResults, setTotalMoveCounter,setPlayersTurn} = props;
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [selected, setSelected] = useState(false);
@@ -47,6 +48,7 @@ const ActionsMenu = (props: MenuProps) => {
     ]);
     setGameResults(undefined);
     setTotalMoveCounter(0);
+    setPlayersTurn(1);
     setOpen(false);
   };
   return (

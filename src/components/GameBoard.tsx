@@ -31,6 +31,7 @@ const GameBoard = () => {
       selectedMovesArr: [],
     },
   ]);
+
   const handleMoves = (squareId: number, playersTurn: number, totalMoveCounter: number) => {
     if (squareId) {
       setPlayersMovesState((prevState) =>
@@ -44,7 +45,6 @@ const GameBoard = () => {
   };
 
   useEffect(() => {
-    console.log('useeffect hit');
     let hasWinner = false;
     for (const player of playersMovesState) {
       if (player.selectedMovesArr.length >= 3) {
@@ -105,6 +105,7 @@ const GameBoard = () => {
           setPlayersMovesState={setPlayersMovesState}
           setGameResults={setGameResults}
           setTotalMoveCounter={setTotalMoveCounter}
+          setPlayersTurn={setPlayersTurn}
         />
       </Container>
     </Box>

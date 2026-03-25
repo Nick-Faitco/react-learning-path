@@ -20,7 +20,6 @@ const Squares = (props: SquareProps) => {
   const {squareId, playersTurn, gameResults, totalMoveCounter, existingMove, handleMoves} = props;
 
   const handleClick = () => {
-    console.log('this is a click');
     handleMoves(squareId, playersTurn, totalMoveCounter);
   }
 
